@@ -21,7 +21,13 @@ def index():
     with open('settings.txt', encoding='utf8') as config:
         data = config.read()
         settings = json.loads(data)
-    return render_template('index.html', posts=posts, bigheader=True, **settings)
+    tags = set()
+    for p in flatpages:
+        t = p.meta.get('tag')
+        if t:
+            tags.add(t.lower())
+
+    return render_template('index.html', posts=posts, bigheader=True, **settings, tags=tags)
 
 
 @app.route('/posts/<name>/')
@@ -29,6 +35,17 @@ def post(name):
     path = '{}/{}'.format(POST_DIR, name)
     post = flatpages.get_or_404(path)
     return render_template('post.html', post=post)
+
+
+@app.route('/pygments.css')
+def pygments_css():
+	return pygments_style_defs('monokai'), 200, {'Content-Type': 'text/css'}
+
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 
 if __name__ == "__main__":
