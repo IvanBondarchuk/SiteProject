@@ -5,6 +5,8 @@ body {
   color: #fff;
   position: relative;
   background: transparent;
+  scrollbar-color: #0053BA #00000000; /* «цвет ползунка» и «цвет полосы скроллбара» */
+  scrollbar-width: thin; /* толщина */
 }
 body::before {
   content: "";
@@ -35,6 +37,23 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Scroll (only chromium :( )
+--------------------------------------------------------------*/
+::-webkit-scrollbar{
+   width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: #0053BA;
+  border-radius: 10px;
+  /*border-left: 2px solid #00000082;
+  border-right: 2px solid #00000082;*/
+}
+::-webkit-scrollbar-track{
+    background: #00000000;
+    border-radius: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -333,132 +352,14 @@ section .container {
   font-family: "Poppins", sans-serif;
   color: #fff;
 }
-
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
-.about-me .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #1e90ff;
-}
-.about-me .content ul {
-  list-style: none;
-  padding: 0;
-}
-.about-me .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
-.about-me .content ul strong {
-  margin-right: 10px;
-}
-.about-me .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: #1e90ff;
-  line-height: 0;
-}
-.about-me .content p:last-child {
-  margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
-# Counts
---------------------------------------------------------------*/
-.counts {
-  padding: 70px 0 60px;
-}
-.counts .count-box {
-  padding: 30px 30px 25px 30px;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.08);
-}
-.counts .count-box i {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 12px;
-  color: #1e90ff;
-  border-radius: 50px;
-  line-height: 0;
-}
-.counts .count-box span {
+.section-title p1 {
+  margin: 0;
+  margin: -30px 0 50px 0;
   font-size: 36px;
-  display: block;
-  font-weight: 600;
-  color: #fff;
-}
-.counts .count-box p {
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-}
-
-/*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-.skills .progress .skill {
-  padding: 10px 0;
-  margin: 0;
+  font-weight: 700;
   text-transform: uppercase;
-  display: block;
-  font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #fff;
-}
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-.skills .progress-bar-wrap {
-  background: rgba(255, 255, 255, 0.2);
-}
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #1e90ff;
-}
-
-/*--------------------------------------------------------------
-# Interests
---------------------------------------------------------------*/
-.interests .icon-box {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.08);
-  transition: ease-in-out 0.3s;
-}
-.interests .icon-box i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 1;
-}
-.interests .icon-box h3 {
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 16px;
-  color: #fff;
-}
-.interests .icon-box:hover {
-  background: rgba(255, 255, 255, 0.12);
 }
 
 /*--------------------------------------------------------------
@@ -527,60 +428,6 @@ section .container {
 }
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #1e90ff;
-}
-
-/*--------------------------------------------------------------
-# Resume
---------------------------------------------------------------*/
-.resume .resume-title {
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #fff;
-}
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid rgba(255, 255, 255, 0.2);
-  position: relative;
-}
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  color: #1e90ff;
-  margin-bottom: 10px;
-}
-.resume .resume-item h5 {
-  font-size: 16px;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.resume .resume-item ul {
-  padding-left: 20px;
-}
-.resume .resume-item ul li {
-  padding-bottom: 10px;
-}
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #1e90ff;
-  border: 2px solid #1e90ff;
 }
 
 /*--------------------------------------------------------------
@@ -665,7 +512,7 @@ section .container {
   border-radius: 50px;
   padding: 2px 15px;
 }
-.portfolio #portfolio-flters li {
+.portfolio #portfolio-flters li {   /*������ �����*/
   cursor: pointer;
   display: inline-block;
   padding: 8px 16px 10px 16px;
@@ -688,6 +535,7 @@ section .container {
 .portfolio .portfolio-wrap {
   transition: 0.3s;
   position: relative;
+  border-radius: 10px;
   overflow: hidden;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
@@ -707,7 +555,7 @@ section .container {
 .portfolio .portfolio-wrap .portfolio-info {
   opacity: 100;
   position: absolute;
-  top: 0;
+  top: 80px;
   left: 5px;
   right: 5px;
   bottom: 0;
@@ -721,12 +569,12 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
-  font-size: 16px;
-  color: #fff;
+  font-size: 24px;
+  color: #FFFFFF;
   font-weight: 600;
 }
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: #ffffff;
+  color: #fff;
   font-size: 12px;
   text-transform: uppercase;
   padding: 0;
@@ -738,7 +586,7 @@ section .container {
 }
 .portfolio .portfolio-wrap .portfolio-links a {
   color: #fff;
-  margin: 0 2px;
+  margin: 0px 0px 0px 0px;
   font-size: 28px;
   display: inline-block;
   transition: 0.3s;
@@ -875,7 +723,6 @@ section .container {
   padding: 30px;
   background: rgba(255, 255, 255, 0.08);
 }
-
 .contact .eform .sent-message {
   display: none;
   background: rgba(255, 255, 255, 0.08);
@@ -983,4 +830,37 @@ section .container {
 }
 .credits a:hover {
   color: #fff;
+}
+
+
+/* language */
+
+.language {
+    position: fixed;
+    left: 10px;
+    top: 30%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index:99999999;
+    }
+    .language__img {
+    margin: 6px;
+    cursor: pointer;
+    opacity: .5;
+    }
+    .language__img:hover,
+    .language__img_active {
+    opacity: 1;
+}
+    /* Эта часть отвечает за то чтобы кнопки находились фиксировано на странице*/
+.page_fix {
+    top: 0 !important;
+    position: static !important;
+}
+
+/* Эта часть отвечает за то чтобы не было видно надписи – Переводчик Google */
+
+.skiptranslate {
+    display: none !important;
 }
