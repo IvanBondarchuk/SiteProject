@@ -13,17 +13,22 @@
         <div class="col-md-6 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-map"></i>
-            <h3>Город</h3>
-            <p>{{ city }}</p>
+            <h3>Адрес главного корпуса университета</h3>
+            <p>{{ adress }}</p>
           </div>
         </div>
-
-
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-envelope"></i>
-            <h3>Email-адрес</h3>
+            <h3>Email-адрес секретаря университета</h3>
             <p><a href="{{ email }}">{{ email.split(':')[1] }}</a></p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-paper-plane"></i>
+            <h3>Официальный телеграм канал СурГУ"</h3>
+            <p><a href="{{ telegram1 }}">{{ '@'+telegram1.split('/')[3] }}</a></p>
           </div>
         </div>
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
@@ -33,6 +38,11 @@
             <p><a href="{{ telegram }}">{{ '@'+telegram.split('/')[3] }}</a></p>
           </div>
         </div>
+      </div>
+
+
+      <div class="section-title">
+        <p1>Обратная связь с Entergram</p1>
       </div>
 
       <form action="https://formspree.io/f/meoqoebw"  method="post" role="form" class="eform mt-4">

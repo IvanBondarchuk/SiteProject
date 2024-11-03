@@ -17,19 +17,24 @@
   <script src="https://kit.fontawesome.com/69e2443572.js" crossorigin="anonymous"></script>
   <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
+    <!-- скрипт для автоперевода сайта -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="https://pavel-lyakhov.ru/js/google-translate.js"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
 </head>
 <body>
-  <main id="main">
-{% block content %} <!-- вложенные шаблоны -->
-{% endblock %}
-  </main>
-  <!-- Скрипты -->
-  <script src="{{ url_for('static', filename='assets/purecounter/purecounter.js') }}"></script>
-  <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='assets/glightbox/js/glightbox.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='assets/isotope-layout/isotope.pkgd.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='assets/swiper/swiper-bundle.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='assets/waypoints/noframework.waypoints.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <main id="main">
+  {% block content %} <!-- вложенные шаблоны -->
+  {% endblock %}
+    </main>
+    <!-- Скрипты -->
+    <script src="{{ url_for('static', filename='assets/purecounter/purecounter.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/waypoints/noframework.waypoints.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
 </body>
 </html>
