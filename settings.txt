@@ -9,6 +9,7 @@
 "sect2":"Мануал",
 "sect3":"Контакты",
 "telegram":"https://t.me/EntranceSurGU_bot",
-"email":"???@???",
-"city":"Сургут"
+"telegram1":"https://t.me/surgu_university",
+"email":"mailto:secretar@surgu.ru",
+"adress":"Ханты-Мансийский автономный округ – Югра, г. Сургут, пр. Ленина, д. 1"
 }

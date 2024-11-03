@@ -17,7 +17,7 @@ app.config.from_object(__name__)
 @app.route("/")
 def index():
     posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
-    posts.sort(key=lambda item: item['title'], reverse=True)
+    posts.sort(key=lambda item: item['nomer'])
     with open('settings.txt', encoding='utf8') as config:
         data = config.read()
         settings = json.loads(data)
@@ -40,7 +40,6 @@ def post(name):
 @app.route('/pygments.css')
 def pygments_css():
 	return pygments_style_defs('monokai'), 200, {'Content-Type': 'text/css'}
-
 
 
 @app.errorhandler(404)
