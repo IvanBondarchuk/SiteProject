@@ -1,71 +1,72 @@
 {% block contacts %}
   <!-- ======= Контакты ======= -->
   <section id="contact" class="contact">
-    <div class="container">
+      <div class="container">
 
-      <div class="section-title">
-        <h2>Контакты</h2>
-        <p>Соцсети и почта</p>
+          <div class="section-title">
+              <h2>Контакты</h2>
+              <p>СурГУ</p>
+          </div>
+
+          <div class="row mt-2">
+              <div class="col-md-3 info-box">
+                  <img src="/static/img/contacts/SurGU.png" alt="" width="150" height="150" />
+                  <a href="https://www.surgu.ru"> https://www.surgu.ru</a>
+              </div>
+
+              <div class="col-md-3 info-box">
+                  <img src="/static/img/contacts/telephone.png" alt="" width="150" height="150" />
+                  <p> +7 346 276-29-14</p>
+              </div>
+
+              <div class="col-md-3 info-box">
+                  <img src="/static/img/contacts/telegram.png" alt="" width="150" height="150" />
+                  <a href="https://t.me/surgu_university"> https://t.me/surgu_university</a>
+              </div>
+
+              <div class="col-md-3 info-box">
+                  <img src="/static/img/contacts/wk.png" alt="" width="150" height="150" />
+                  <a href="https://vk.com/surgu"> https://vk.com/surgu</a>
+              </div>
+          </div>
+
+          <div class="section-title">
+              <p1>Обратная связь с Entergram</p1>
+          </div>
+
+          <div class="row mt-2">
+              <div class="col-md-3 info-box">
+                  <img src="/static/img/contacts/EntranceSurGU.png" alt="" width="150" height="150" />
+                  <a href="https://t.me/EntranceSurGU_bot"> https://t.me/EntranceSurGU_bot</a>
+              </div>
+
+              <div class="col-md-3 info-box">
+                  <img src="/static/img/contacts/Entergram.png" alt="" width="150" height="150" />
+                  <a href="https://t.me/Entergramm"> https://t.me/Entergramm</a>
+              </div>
+          </div>
+
+          <form action="https://formspree.io/f/meoqoebw" method="post" role="form" class="eform mt-4">
+              <div class="row">
+                  <div class="col-md-6 form-group">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Имя" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Ваш Email" required>
+                  </div>
+              </div>
+              <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Тема" required>
+              </div>
+              <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Сообщение" required></textarea>
+              </div>
+              <div class="my-3">
+
+              </div>
+              <div class="text-center"><button type="submit">Отправить</button></div>
+          </form>
+
       </div>
-
-      <div class="row mt-2">
-
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>Адрес главного корпуса университета</h3>
-            <p>{{ adress }}</p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email-адрес секретаря университета</h3>
-            <p><a href="{{ email }}">{{ email.split(':')[1] }}</a></p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-paper-plane"></i>
-            <h3>Официальный телеграм канал СурГУ"</h3>
-            <p><a href="{{ telegram1 }}">{{ '@'+telegram1.split('/')[3] }}</a></p>
-          </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-paper-plane"></i>
-            <h3>Телеграм бот "Entrance СурГУ"</h3>
-            <p><a href="{{ telegram }}">{{ '@'+telegram.split('/')[3] }}</a></p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="section-title">
-        <p1>Обратная связь с Entergram</p1>
-      </div>
-
-      <form action="https://formspree.io/f/meoqoebw"  method="post" role="form" class="eform mt-4">
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Имя" required>
-          </div>
-          <div class="col-md-6 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Ваш Email" required>
-          </div>
-        </div>
-        <div class="form-group mt-3">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Тема" required>
-        </div>
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Сообщение" required></textarea>
-        </div>
-        <div class="my-3">
-
-        </div>
-        <div class="text-center"><button type="submit">Отправить</button></div>
-      </form>
-
-    </div>
   </section><!-- конец секции Контакты -->
 {% endblock %}
