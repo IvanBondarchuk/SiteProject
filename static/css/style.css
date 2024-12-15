@@ -703,7 +703,7 @@ section .container {
 
 .portfolio-details .portfolio-info .text2 img{
   margin-right: 30px;
-  width: 450px;
+  max-width: 450px;
    max-height: 250px;
 }
 
